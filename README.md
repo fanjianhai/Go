@@ -18,7 +18,7 @@
 ```
 
 ## 源码指引
-
+- :white_check_mark: [Gin 框架 - 自定义路由配置](https://github.com/xinliangnote/Go/blob/master/01-Gin框架/codes/02-路由配置)
 
 ## 作者
 昵称：小范<br/>
