@@ -32,8 +32,7 @@ Path: %GOROOT%\bin;%GOPATH%\bin;
 
 
 
-![image-20200929114331694](D:\GoProject\Go\00-基础语法\images\image-20200929114331694.png)
-
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200929162417774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZhbmppYW5oYWk=,size_16,color_FFFFFF,t_70#pic_center)
 
 
 ### 2.2. Linux环境安装
@@ -267,7 +266,7 @@ GoLand 是 JetBrains 公司推出的 Go 语言集成开发环境，与我们用�
 
 ### 5.2. 注意不要忘了设置go modules environment
 
-![image-20200929151445364](D:\GoProject\Go\00-基础语法\images\image-20200929151445364.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200929162510936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZhbmppYW5oYWk=,size_16,color_FFFFFF,t_70#pic_center)
 
 ### 5.3. 常用快捷键
 
