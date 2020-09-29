@@ -3,9 +3,9 @@
 <div style="text-align: center;">
 <img src="http://c.biancheng.net/uploads/allimg/180808/1-1PPQA9545W.jpg"/>
 </div>
-
-项目地址：https://github.com/fanjianhai/Go
-<br/>go语言学习之路！
+<br />
+**项目地址：** https://github.com/fanjianhai/Go
+<br/> go语言学习之路！
 
 **持续更新...** 
 
