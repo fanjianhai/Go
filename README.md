@@ -1,5 +1,9 @@
 ## 项目介绍
 
+<div style="text-align: center;">
+![](http://c.biancheng.net/uploads/allimg/180808/1-1PPQA9545W.jpg)
+</div>
+
 项目地址：https://github.com/fanjianhai/Go
 <br/>go语言学习之路！
 
