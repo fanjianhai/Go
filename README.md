@@ -23,8 +23,7 @@
 ```
 
 ## 源码指引
-- :white_check_mark: [Gin 框架 - 自定义路由配置](https://github.com/xinliangnote/Go/blob/master/01-Gin框架/codes/02-路由配置)
-
+- :white_check_mark: [Go 基本语法](https://github.com/fanjianhai/Go/tree/master/00-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/codes)
 ## 作者
 昵称：小范<br/>
 格言：我可闭于一核桃壳内, 而仍自认我是无疆限之君主。<br/>
