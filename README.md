@@ -19,6 +19,8 @@
 │      ├── 02-变量
 │      ├── 03-数组
 │      ├── 04-Slice 切片
+│      ├── 05-Struct 结构体
+│      ├── 06-Map 结构体
 |   ├── 01-Gin框架
 |   ├── 02-gRPC
 |   ├── 03-go-gin-api [文档]
@@ -27,6 +29,9 @@
 ```
 
 ## 源码指引
+
+#### Go - 基础篇
+
 - :white_check_mark: [Go 基本语法](https://github.com/fanjianhai/Go/tree/master/00-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/codes)
 
 ## github图片不显示问题
