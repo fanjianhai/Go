@@ -1,13 +1,13 @@
-## 概述
+## 1. 概述
 
 Map 集合是无序的 key-value 数据结构。
 
 Map 集合中的 key / value 可以是任意类型，但所有的 key 必须属于同一数据类型，所有的 value 必须属于同一数据类型，key 和 value 的数据类型可以不相同。
 
-## 声明 Map
+## 2. 声明 Map
 
-```
-//demo_14.go
+```go
+//demo15.go
 package main
 
 import (
@@ -41,16 +41,22 @@ func main() {
 	}
 	fmt.Println("p6 :", p6)
 }
+// 运行结果
+$ go run 00-基础语法/codes/demo15.go
+p1 : map[1:Tom]
+p2 : map[1:Tom]
+p3 : map[1:Tom]
+p4 : map[1:Tom]
+p5 : map[1:Tom]
+p6 : map[1:Tom]
 ```
 
-运行结果：
 
-![](https://github.com/xinliangnote/Go/blob/master/00-基础语法/images/06-集合/6_go_1.png)
 
-## 生成 JSON
+## 3. 生成 JSON
 
-```
-//demo_15.go
+```go
+//demo16.go
 package main
 
 import (
@@ -88,16 +94,23 @@ func main() {
 	fmt.Println("--- json to map ---")
 	fmt.Println("map data :", res2)
 }
+
+// 运行结果
+$ go run 00-基础语法/codes/demo16.go
+map data : map[code:200 data:map[age:30 hobby:[读书 爬山] username:Tom] msg:success]
+
+--- map to json ---
+json data : {"code":200,"data":{"age":"30","hobby":["读书","爬山"],"username":"Tom"},"msg":"success"}
+
+--- json to map ---
+map data : map[code:200 data:map[age:30 hobby:[读书 爬山] username:Tom] msg:success]
+
 ```
 
-运行结果：
+## 4. 编辑和删除
 
-![](https://github.com/xinliangnote/Go/blob/master/00-基础语法/images/06-集合/6_go_2.png)
-
-## 编辑和删除
-
-```
-//demo_16.go
+```go
+//demo17.go
 package main
 
 import (
@@ -119,7 +132,9 @@ func main() {
 	person[3] = "Kevin"
 	fmt.Println("data :",person)
 }
+// 运行结果
+$ go run 00-基础语法/codes/demo17.go
+data : map[1:Tom 2:Aaron 3:John]
+data : map[1:Tom 3:John]
+data : map[1:Tom 2:Jack 3:Kevin]
 ```
-运行结果：
-
-![](https://github.com/xinliangnote/Go/blob/master/00-基础语法/images/06-集合/6_go_3.png)
