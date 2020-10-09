@@ -1,38 +1,12 @@
-## 概述
+## 1. 概述
 
-最近掉进需求坑了，刚爬上来，评估排期出现了严重问题，下面三张图很符合当时的心境。
+用 Go 如何解析 JSON 数据，包含三种情况，`强类型解析`、`弱类型解析`、`返回结构不确定` 等。
 
-谈需求
-
-![](https://github.com/xinliangnote/Go/blob/master/00-基础语法/images/11_go_1.jpeg)
-
-估排期
-
-![](https://github.com/xinliangnote/Go/blob/master/00-基础语法/images/11_go_2.jpeg)
-
-开始干
-
-![](https://github.com/xinliangnote/Go/blob/master/00-基础语法/images/11_go_3.jpeg)
-
-为啥会这样，我简单总结了下：
-
-- 与第三方对接。
-- 跨团队对接。
-- 首次用 Go 做项目。
-- 业务流程没屡清楚就出排期（大坑）。
-- 需求调整后未进行调整排期（大坑）。
-
-有了这次经验，后期关于如何评估排期也可以和大家唠唠。
-
-废话不多说了，进入今天主题。
-
-今天给大家分享用 Go 如何解析 JSON 数据，包含三种情况，强类型解析、弱类型解析、返回结构不确定 等。
-
-## JSON 结构
+## 2. JSON 结构
 
 比如，请求了手机归属地的接口，json 数据返回如下：
 
-```
+```json
 {
     "resultcode": "200",
     "reason": "Return Successd!",
@@ -55,13 +29,13 @@
 
 json 转 struct ，自己手写就太麻烦了，有很多在线的工具可以直接用，我用的这个：
 
-https://mholt.github.io/json-to-go/
+**https://mholt.github.io/json-to-go/**
 
 在左边贴上 json 后面就生成 struct 了。
 
 用代码实现下：
 
-```
+```go
 type MobileInfo struct {
 	Resultcode string `json:"resultcode"`
 	Reason     string `json:"reason"`
@@ -104,7 +78,7 @@ func main() {
 
 输出：
 
-```
+```go
 200
 Return Successd!
 杭州
@@ -130,8 +104,16 @@ https://github.com/mitchellh/mapstructure
 
 看文档有一个弱类型解析的方法 `WeakDecode()`，咱们试一下：
 
-```
-type MobileInfo struct {
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"github.com/mitchellh/mapstructure"
+)
+
+type MobileInfo1 struct {
 	Resultcode string `json:"resultcode"`
 }
 
@@ -148,7 +130,7 @@ func main() {
 		fmt.Println(err.Error())
 	}
 
-	var mobile MobileInfo
+	var mobile MobileInfo1
 	err = mapstructure.WeakDecode(result, &mobile)
 	if err != nil {
 		fmt.Println(err.Error())
@@ -156,6 +138,7 @@ func main() {
 
 	fmt.Println(mobile.Resultcode)
 }
+
 ```
 
 输出：
@@ -168,7 +151,7 @@ func main() {
 
 这个就不用上面的例子了，看下官方提供的例子 `Example (EmbeddedStruct)` 。
 
-```
+```go
 type Family struct {
 	LastName string
 }
@@ -211,13 +194,3 @@ San Francisco
 使用的是 mapstructure 包，struct tag 标识不要写 json，要写 mapstructure。
 
 其他情况自己探索吧，比如： `Example (Tags)`。
-
-## go-gin-api 系列文章
-
-- [7. 路由中间件 - 签名验证](https://mp.weixin.qq.com/s/0cozELotcpX3Gd6WPJiBbQ)
-- [6. 路由中间件 - Jaeger 链路追踪（实战篇）](https://mp.weixin.qq.com/s/Ea28475_UTNaM9RNfgPqJA)
-- [5. 路由中间件 - Jaeger 链路追踪（理论篇）](https://mp.weixin.qq.com/s/28UBEsLOAHDv530ePilKQA)
-- [4. 路由中间件 - 捕获异常](https://mp.weixin.qq.com/s/SconDXB_x7Gan6T0Awdh9A)
-- [3. 路由中间件 - 日志记录](https://mp.weixin.qq.com/s/eTygPXnrYM2xfrRQyfn8Tg)
-- [2. 规划项目目录和参数验证](https://mp.weixin.qq.com/s/11AuXptWGmL5QfiJArNLnA)
-- [1. 使用 go modules 初始化项目](https://mp.weixin.qq.com/s/1XNTEgZ0XGZZdxFOfR5f_A)

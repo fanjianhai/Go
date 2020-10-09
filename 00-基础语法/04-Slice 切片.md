@@ -83,6 +83,12 @@ sli[0:3:4] == [1 2 3]
 len=3 cap=4 slice=[1 2 3]
 ```
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009094740466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZhbmppYW5oYWk=,size_16,color_FFFFFF,t_70#pic_center)
+
+
+
+
+
 ## 4. 追加切片
 
 ```go

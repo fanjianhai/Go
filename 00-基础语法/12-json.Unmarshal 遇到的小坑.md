@@ -2,7 +2,7 @@
 
 使用 `json.Unmarshal()`，反序列化时，出现了科学计数法，参考代码如下：
 
-```
+```go
 jsonStr := `{"number":1234567}`
 result := make(map[string]interface{})
 err := json.Unmarshal([]byte(jsonStr), &result)
@@ -25,7 +25,7 @@ fmt.Println(result)
 
 从 `encoding/json` 可以找到答案，看一下这段注释：
 
-```
+```go
 // To unmarshal JSON into an interface value,
 // Unmarshal stores one of these in the interface value:
 //
@@ -45,7 +45,7 @@ fmt.Println(result)
 
 强制类型转换，参考代码如下：
 
-```
+```go
 jsonStr := `{"number":1234567}`
 result := make(map[string]interface{})
 err := json.Unmarshal([]byte(jsonStr), &result)
@@ -62,7 +62,7 @@ fmt.Println(int(result["number"].(float64)))
 
 尽量避免使用 `interface`，对 `json` 字符串结构定义结构体，快捷方法可使用在线工具：`https://mholt.github.io/json-to-go/`。
 
-```
+```go
 type Num struct {
 	Number int `json:"number"`
 }
@@ -83,7 +83,7 @@ fmt.Println(result)
 
 使用 `UseNumber()` 方法。
 
-```
+```go
 jsonStr := `{"number":1234567}`
 result := make(map[string]interface{})
 d := json.NewDecoder(bytes.NewReader([]byte(jsonStr)))
@@ -100,7 +100,7 @@ fmt.Println(result)
 
 这时一定要注意 `result["number"]` 的数据类型！
 
-```
+```go
 fmt.Println(fmt.Sprintf("type: %v", reflect.TypeOf(result["number"])))
 
 // 输出
@@ -109,14 +109,14 @@ fmt.Println(fmt.Sprintf("type: %v", reflect.TypeOf(result["number"])))
 
 通过代码可以看出 `json.Number` 其实就是字符串类型：
 
-```
+```go
 // A Number represents a JSON number literal.
 type Number string
 ```
 
 如果转换其他类型，参考如下代码：
 
-```
+```go
 // 转成 int64
 numInt, _ := result["number"].(json.Number).Int64()
 fmt.Println(fmt.Sprintf("value: %v, type: %v", numInt, reflect.TypeOf(numInt)))
