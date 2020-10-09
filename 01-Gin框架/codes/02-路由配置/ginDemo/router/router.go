@@ -1,7 +1,6 @@
 package router
 
 import (
-	"fmt"
 	"github.com/fanjianhai/gostudy/01-Gin框架/codes/02-路由配置/ginDemo/common"
 	"github.com/fanjianhai/gostudy/01-Gin框架/codes/02-路由配置/ginDemo/controller/v1"
 	"github.com/fanjianhai/gostudy/01-Gin框架/codes/02-路由配置/ginDemo/controller/v2"
@@ -38,7 +37,6 @@ func SignDemo(c *gin.Context) {
 		"ts"    : []string{ts},
 	}
 	res["sn"] = common.CreateSign(params)
-	fmt.Println(res["sn"])
 	res["ts"] = ts
 	common.RetJson("200", "", res, c)
 }
