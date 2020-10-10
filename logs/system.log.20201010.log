@@ -1,0 +1,1 @@
+{"client_ip":"::1","latency_time":0,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/product/add?name=abc\u0026price=100","status_code":200,"time":"2020-10-10 15:08:26"}
