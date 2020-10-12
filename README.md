@@ -34,6 +34,8 @@
 │      ├── 04-数据绑定和验证
 │      ├── 05-自定义错误处理
 │   ├── 02-gRPC
+│      ├── 01-Go gRPC Hello World
+│      ├── 02-Go gRPC 调试工具
 │   ├── 03-go-gin-api [文档]
 ├── Docker
 ├── Kubernetes
