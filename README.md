@@ -57,6 +57,10 @@
 
 - :white_check_mark: [Gin 框架 - 自定义错误处理](https://github.com/fanjianhai/Go/tree/master/01-Gin%E6%A1%86%E6%9E%B6/codes/05-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86)
 
+Go gRPC
+
+- :white_check_mark: [Go gRPC - Hello World](https://github.com/fanjianhai/Go/tree/master/02-Go_gRPC/codes/01-gRPC_Hello_World)
+
 
 ## github图片不显示问题
 1. 源码中都含有相应的图片

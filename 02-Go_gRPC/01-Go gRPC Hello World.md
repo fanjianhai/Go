@@ -118,7 +118,7 @@ go get -u google.golang.org/grpc
 
 **编写服务端 hello.proto 文件**
 
-```
+```go
 syntax = "proto3"; // 指定 proto 版本
 
 package hello;     // 指定包名
@@ -145,10 +145,6 @@ message HelloResponse {
 
 ```
 
-了解更多 Protobuf 语法，请查看：
-
-https://developers.google.com/protocol-buffers/
-
 **生成服务端 `.pb.go`**
 
 ```
@@ -161,7 +157,7 @@ protoc -I . --go_out=plugins=grpc:. ./hello.proto
 
 **编写服务端提供接口的代码**
 
-```
+```go
 // hello_server.go
 package hello_controller
 
@@ -185,7 +181,7 @@ func (h *HelloController) LotsOfReplies(in *hello.HelloRequest, stream hello.Hel
 }
 ```
 
-```
+```go
 // main.go
 package main
 
@@ -222,15 +218,15 @@ func main() {
 
 运行：
 
-```
+```go
 go run main.go
 
-2019/07/28 17:51:20 Listen on 0.0.0.0:9090
+2020/10/12 10:45:16 Listen on 0.0.0.0:9090
 ```
 
 **编写客户端请求接口的代码**
 
-```
+```go
 package main
 
 import (
@@ -291,20 +287,20 @@ func main() {
 ```
 go run main.go
 
-2019/07/28 17:58:13 Hello World
-2019/07/28 17:58:13 Hello World Reply 0
-2019/07/28 17:58:13 Hello World Reply 1
-2019/07/28 17:58:13 Hello World Reply 2
-2019/07/28 17:58:13 Hello World Reply 3
-2019/07/28 17:58:13 Hello World Reply 4
-2019/07/28 17:58:13 Hello World Reply 5
-2019/07/28 17:58:13 Hello World Reply 6
-2019/07/28 17:58:13 Hello World Reply 7
-2019/07/28 17:58:13 Hello World Reply 8
-2019/07/28 17:58:13 Hello World Reply 9
+2020/10/12 10:46:17 Hello World
+2020/10/12 10:46:17 Hello World Reply 0
+2020/10/12 10:46:17 Hello World Reply 1
+2020/10/12 10:46:17 Hello World Reply 2
+2020/10/12 10:46:17 Hello World Reply 3
+2020/10/12 10:46:17 Hello World Reply 4
+2020/10/12 10:46:17 Hello World Reply 5
+2020/10/12 10:46:17 Hello World Reply 6
+2020/10/12 10:46:17 Hello World Reply 7
+2020/10/12 10:46:17 Hello World Reply 8
+2020/10/12 10:46:17 Hello World Reply 9
 ```
 
-## 源码
+## 6. 源码
 
-[查看源码](https://github.com/xinliangnote/Go/blob/master/02-Go%20gRPC/codes/01-gRPC%20Hello%20World)
+[查看源码](https://github.com/fanjianhai/Go/tree/master/02-Go_gRPC/codes/01-gRPC_Hello_World)
 
