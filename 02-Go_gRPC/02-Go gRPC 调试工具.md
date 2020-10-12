@@ -1,18 +1,7 @@
-## 概述
-
-最近这段时间工作挺忙的，发现已经 3 周没更文了...
-
-感谢你们还在，今天给大家分享一款 gRPC 的调试工具。
-
-进入正题。
+## 1. 概述
 
 
 当我们在写 HTTP 接口的时候，使用的是 Postman 进行接口调试，那么在写 gRPC 接口的时候，有没有类似于 Postman 的调试工具呢？
-
-![](https://github.com/xinliangnote/Go/blob/master/02-Go%20gRPC/images/2_grpc_1.gif)
-
-
-这是有的。
 
 咱们一起看下 `grpcui`，源码地址：
 
@@ -22,7 +11,7 @@ https://github.com/fullstorydev/grpcui
 
 > grpcui is a command-line tool that lets you interact with gRPC servers via a browser. It's sort of like Postman, but for gRPC APIs instead of REST.
 
-## 写一个 gRPC API
+## 2. 写一个 gRPC API
 
 我原来写过 Demo，可以直接用原来写的 listen 项目。
 
@@ -81,7 +70,7 @@ cd listen && go run main.go
 
 服务启动成功后，等待使用。
 
-## grpcui 使用
+## 3. grpcui 使用
 
 #### 安装
 
@@ -133,22 +122,4 @@ gRPC Web UI available at http://127.0.0.1:63027/
 ```
 
 在浏览器中访问：`http://127.0.0.1:63027/`
-
-![](https://github.com/xinliangnote/Go/blob/master/02-Go%20gRPC/images/2_grpc_2.gif)
-
-到这，我们看到 Service name、Method name 都出来了，传输参数直接在页面上进行操作即可。
-
-当发起 Request "Tom"，也能获得 Response “Tom”。
-
-当然，如果这个服务下面有多个 Service name，多个 Method name 也都会显示出来的，去试试吧。
-
-## go-gin-api 系列文章
-
-- [7. 路由中间件 - 签名验证](https://mp.weixin.qq.com/s/0cozELotcpX3Gd6WPJiBbQ)
-- [6. 路由中间件 - Jaeger 链路追踪（实战篇）](https://mp.weixin.qq.com/s/Ea28475_UTNaM9RNfgPqJA)
-- [5. 路由中间件 - Jaeger 链路追踪（理论篇）](https://mp.weixin.qq.com/s/28UBEsLOAHDv530ePilKQA)
-- [4. 路由中间件 - 捕获异常](https://mp.weixin.qq.com/s/SconDXB_x7Gan6T0Awdh9A)
-- [3. 路由中间件 - 日志记录](https://mp.weixin.qq.com/s/eTygPXnrYM2xfrRQyfn8Tg)
-- [2. 规划项目目录和参数验证](https://mp.weixin.qq.com/s/11AuXptWGmL5QfiJArNLnA)
-- [1. 使用 go modules 初始化项目](https://mp.weixin.qq.com/s/1XNTEgZ0XGZZdxFOfR5f_A)
 
