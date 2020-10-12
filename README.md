@@ -45,6 +45,17 @@
 
 - :white_check_mark: [Go 基本语法](https://github.com/fanjianhai/Go/tree/master/00-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/codes)
 
+#### Gin 框架
+
+- :white_check_mark: [Gin 框架 - 自定义路由配置](https://github.com/fanjianhai/Go/tree/master/01-Gin%E6%A1%86%E6%9E%B6/codes/02-%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE)
+
+- :white_check_mark: [Gin 框架 - 使用 Logrus 进行日志记录](https://github.com/fanjianhai/Go/tree/master/01-Gin%E6%A1%86%E6%9E%B6/codes/03-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95)
+
+- :white_check_mark: [Gin 框架 - 绑定数据和验证](https://github.com/fanjianhai/Go/tree/master/01-Gin%E6%A1%86%E6%9E%B6/codes/04-%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E5%92%8C%E7%BB%91%E5%AE%9A)
+
+- :white_check_mark: [Gin 框架 - 自定义错误处理](https://github.com/fanjianhai/Go/tree/master/01-Gin%E6%A1%86%E6%9E%B6/codes/05-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86)
+
+
 ## github图片不显示问题
 1. 源码中都含有相应的图片
 2. 修改hosts文件
